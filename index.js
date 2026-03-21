@@ -1,100 +1,75 @@
 // VARIABLES AND TYPES
-// In JavaScript, variables can contain different primitive types.
-// This section establishes a few simple typed values for later use.
-const name = "Omar";    // string value (text), immutable because const cannot be reassigned
-const age = 22;          // number value (numeric literal)
-const isDeveloper = true; // boolean value (true/false)
+const name = "Omar"; // Stores a string value (name)
+const age = 22; // Stores a number (age)
+const isDeveloper = true; // Stores a boolean value
 
-// 'typeof' is an operator that returns the JavaScript type of its operand.
-console.log(typeof name); // expected output: "string"
-console.log(typeof age);  // expected output: "number"
-console.log(typeof isDeveloper); // expected output: "boolean"
+console.log(typeof name); // Logs the type of 'name' (string)
+console.log(typeof age); // Logs the type of 'age' (number)
+console.log(typeof isDeveloper); // Logs the type of 'isDeveloper' (boolean)
 
 // TEMPLATE LITERALS
-// Template literals use backticks (`) and allow embedded expressions with ${}.
-// This makes constructing dynamic strings easier and more readable than concatenation.
-console.log(`Hi, my name is ${name} and I am ${age} years old.`);
+console.log(`Hi, my name is ${name} and I am ${age} years old.`); // Creates a string using variables
 
 // FUNCTIONS
-// A function is a reusable block of code that can take inputs and optionally return a value.
 function greet(name) {
-    // parameter 'name' is a local variable inside this function.
-    return `Hello, ${name}!`; // returns a personalized greeting string
+    return `Hello, ${name}!`; // Returns a greeting message
 }
 
 function multiply(a, b) {
-    // parameters 'a' and 'b' are numbers to multiply.
-    return a * b; // returns the arithmetic product
+    return a * b; // Returns the product of two numbers
 }
 
-// Example usage (not required by the code flow):
-// console.log(greet("Ana")); // "Hello, Ana!"
-// console.log(multiply(3, 4)); // 12
-
 // COUNTERS
-// A mutable variable can be updated repeatedly (let allows reassigning values).
-let counter = 0; // start at zero
-counter++;      // increment operator adds 1 (counter becomes 1)
-counter++;      // becomes 2
-counter++;      // becomes 3
-console.log(counter); // logs the final counter value: 3
+let counter = 0; // Initializes a counter variable
+counter++; // Increments counter by 1
+counter++; // Increments counter by 1
+counter++; // Increments counter by 1
+console.log(counter); // Logs the final counter value
 
 // ARRAYS
-// An array stores an ordered list of elements (here, strings).
-const fruits = ["apple", "orange", "grape", "mango"];
+const fruits = ["apple", "orange", "grape", "mango"]; // Creates an array of fruits
 
-console.log(fruits);        // prints the whole array
-console.log(fruits[0]);     // array indexing (first element: "apple")
-console.log(fruits[2]);     // third element: "grape"
-console.log(fruits.length); // number of items in the array (4)
+console.log(fruits); // Logs the full array
+console.log(fruits[0]); // Logs the first element
+console.log(fruits[2]); // Logs the third element
+console.log(fruits.length); // Logs the number of elements
 
-// Mutating arrays:
-fruits.push("watermelon"); // append an item at the end
-console.log(fruits);        // now includes "watermelon"
+fruits.push("watermelon"); // Adds an element to the end
+console.log(fruits); // Logs updated array
 
-fruits.pop();               // remove and return the last item ("watermelon")
-console.log(fruits);        // back to original list
+fruits.pop(); // Removes the last element
+console.log(fruits); // Logs updated array
 
-// Higher-order array method map() creates a new array by applying callback to each element.
 const uppercase = fruits.map(function(fruit) {
-    // callback receives each fruit; return its uppercase version.
-    return fruit.toUpperCase();
+    return fruit.toUpperCase(); // Converts each element to uppercase
 });
-console.log(uppercase); // ["APPLE", "ORANGE", "GRAPE", "MANGO"]
+console.log(uppercase); // Logs new transformed array
 
 // CONDITIONALS
-// Branching logic based on a condition.
-const userAge = 20;
+const userAge = 20; // Stores user age
+
 if (userAge >= 18) {
-    // block executes if the condition evaluates to true.
-    console.log("You are an adult");
+    console.log("You are an adult"); // Runs if age is 18 or older
 } else {
-    // block executes when the condition is false.
-    console.log("You are a minor");
+    console.log("You are a minor"); // Runs if age is under 18
 }
 
 // == VS ===
-// == does type coercion before comparison, so 5 == "5" is true.
-// === checks both value and type, so 5 === "5" is false.
-console.log(5 == "5");  // true (loose equality)
-console.log(5 === "5"); // false (strict equality)
+console.log(5 == "5"); // Compares values (loose equality, ignores type)
+console.log(5 === "5"); // Compares value and type (strict equality)
 
 // LOOPS
-// Classic for-loop iterates by index from 0 to length - 1.
 for (let i = 0; i < fruits.length; i++) {
-    console.log(i, fruits[i]); // each pass prints index and fruit
+    console.log(i, fruits[i]); // Iterates using index
 }
 
-// forEach executes callback for each array element; simpler than manual index loop.
 fruits.forEach(function(fruit) {
-    console.log(fruit); // prints every fruit string
+    console.log(fruit); // Iterates through each element
 });
 
 // COMBINING EVERYTHING
-// Another array and an operation that uses template strings inside forEach.
-const names = ["Omar", "Sofia", "Yahir", "Luis", "Oskar"];
+const names = ["Omar", "Sofia", "Yahir", "Luis", "Oskar"]; // Array of names
 
 names.forEach(function(name) {
-    // greet each person with a dynamically constructed message.
-    console.log(`Hello, ${name}!`);
+    console.log(`Hello, ${name}!`); // Greets each name
 });
