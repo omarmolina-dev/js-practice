@@ -73,3 +73,40 @@ const names = ["Omar", "Sofia", "Yahir", "Luis", "Oskar"]; // Array of names
 names.forEach(function(name) {
     console.log(`Hello, ${name}!`); // Greets each name
 });
+
+
+const person = {
+    name: "Omar", // Person's name
+    age: 22, // Person's age
+    city: "Hermosillo", // Person's city
+    isDeveloper: true // Person's profession
+}
+person.email = "omar03molina@gmail.com";
+
+console.log(person);
+console.log(person.name);
+console.log(person.age);
+console.log(person.email); // Logs the email (property now exists)
+
+person.greet = function() {
+    return `Hi, I'm ${this.name} from ${this.city}.`; // Method to greet using object properties
+}
+
+console.log(person.greet()); // Calls the greet method
+
+const students = [
+    { name: "Omar", grade: 85, age: 22, city: "Hermosillo" },
+    { name: "Sofia", grade: 92, age: 24, city: "Hermosillo" },
+    { name: "Yahir", grade: 78, age: 23, city: "Monterrey" },
+    { name: "Luis", grade: 95, age: 21, city: "Cancún" },
+    { name: "Oskar", grade: 88, age: 25, city: "México" }
+];
+
+console.log(students[0]);
+console.log(students[0].name);
+console.log(students.length);
+
+students.forEach(function(student) {
+    console.log(`${student.name} is ${student.age} years old and lives in ${student.city}.`); // Logs each student's name, age, and city
+});
+
