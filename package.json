@@ -2,5 +2,26 @@
   "type": "module",
   "dependencies": {
     "node-fetch": "^3.3.2"
-  }
+  },
+  "name": "js-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarmolina-dev/js-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omarmolina-dev/js-practice/issues"
+  },
+  "homepage": "https://github.com/omarmolina-dev/js-practice#readme"
 }
+
